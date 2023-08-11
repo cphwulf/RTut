@@ -1,0 +1,28 @@
+{
+    "id": "2833D86A",
+    "path": "~/Git/RIntro/rs.R",
+    "project_path": "rs.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": true,
+    "created": 1691561753015.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "9,0",
+        "scrollLine": "9",
+        "marks": "<:22,7\n>:22,20\nj:17,2\ni:32,26\no:32,26"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1691574610,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1691575849789,
+    "read_only": false,
+    "read_only_alternatives": []
+}

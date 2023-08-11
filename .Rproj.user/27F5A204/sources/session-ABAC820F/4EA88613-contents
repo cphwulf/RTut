@@ -1,0 +1,26 @@
+# sample data frame
+df <- data.frame( x= 1:400,
+                  y= getdata(400))
+
+# cars
+data()
+head(cars)
+dfc=cars
+# fit linear model
+linear_model <- lm(y ~ x, data=df)
+mlm <- lm(dist ~ speed, data=dfc)
+
+# Plot abline plot
+plot( df$x, df$y )
+plot( dfc$speed, dfc$dist )
+
+abline( linear_model)
+summary(linear_model)
+summary(mlm)
+
+getdata <- function(size) {
+  numbers=1:size
+  delta=20
+  y=unlist(lapply(numbers,function(x) val=runif(1,x-delta,x+delta)))
+  return(y)
+}

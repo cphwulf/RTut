@@ -1,0 +1,39 @@
+library(tidyverse)
+library(modelr)
+options(na.action = na.warn)
+ggplot(sim1, aes(x, y)) +
+  geom_point()
+sim1
+data()
+sd=sim1
+
+tc=function(input) {
+  T = 150+((input - 40)/4)
+  diff=runif(1,T-10,T+10)
+  #diff=1
+  sign=abs(runif(1,-2,2))
+  return(T+(sign*diff))
+}
+m=matrix(NA,nrow = 1000,ncol = 2)
+for (i in 1:1000) {
+  test = as.integer(runif(1,i,i+7) )
+  if (i==test) {
+   tmp=runif(1,0,160) 
+  } else {
+  tmp=(runif(1,30,60))
+  }
+  tmp2=tc(tmp)
+  m[i,1]=tmp2
+  m[i,2]=tmp
+  #df[1,2]=123
+}
+df=as.data.frame(m)
+plot(df)
+names(df)=c("temp","sound")
+modell=lm(data=df, temp ~ sound, model=F)
+coefficients(modell)
+summery(modell)
+summary(modell)
+plot(modell)
+abline(modell)
+plot(df)
